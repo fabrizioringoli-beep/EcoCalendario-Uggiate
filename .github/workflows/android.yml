@@ -1,4 +1,4 @@
- - name: Configura Java
+   - name: Configura Java
         uses: actions/setup-java@v5
         with:
           distribution: temurin
