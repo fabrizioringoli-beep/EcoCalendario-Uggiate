@@ -1,4 +1,20 @@
-   - name: Configura Java
+
+name: Crea APK EcoCalendario
+
+'on':
+  workflow_dispatch:
+  push:
+    branches:
+      - principale
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Scarica progetto
+        uses: actions/checkout@v4
+
+      - name: Configura Java
         uses: actions/setup-java@v5
         with:
           distribution: temurin
