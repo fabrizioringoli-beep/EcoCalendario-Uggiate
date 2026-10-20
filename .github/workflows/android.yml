@@ -1,26 +1,8 @@
-name: Crea APK EcoCalendario
-
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - principale
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Scarica progetto
-        uses: actions/checkout@v4
-
-      - name: Configura Java
-        uses: actions/setup-java@v4
+ - name: Configura Java
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
-
-  
 
       - name: Configura Gradle
         uses: gradle/actions/setup-gradle@v4
